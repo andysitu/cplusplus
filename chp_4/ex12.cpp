@@ -16,8 +16,11 @@ void listPrime(vector<int> & vec)
 
 int main()
 {
+   int max = 100;
+   cout << "What is the max number to find prime numbers up to? ";
+   cin >> max;
    vector<int> vec = {};
-   for (int i = 2; i < 101; i++) {
+   for (int i = 2; i < max + 1; i++) {
       if (checkPrime(i, vec) == true)
          vec.push_back(i);
    }

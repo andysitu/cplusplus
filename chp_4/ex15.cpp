@@ -16,11 +16,14 @@ void listPrime(vector<int> & vec)
 
 int main()
 {
-   vector<int> vec = {};
-   for (int i = 2; i < 101; i++) {
-      if (checkPrime(i, vec) == true)
-         vec.push_back(i);
+   int max = 10;
+   cout << "How many prime numbers do I find? ";
+   cin >> max;
+   vector<int> primes = {};
+   for (int i = 2; primes.size() < max; i++) {
+      if (checkPrime(i, primes) == true)
+         primes.push_back(i);
    }
 
-   listPrime(vec);
+   listPrime(primes);
 }
